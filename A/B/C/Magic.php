@@ -9,12 +9,12 @@ class Magic
 
     public function __construct()
     {
-        echo 'This is a constructor test.' . PHP_EOL;
+        echo 'This is a constructor test.';
     }
 
     public function __destruct()
     {
-        echo 'Destructor executed at the end of script.' . PHP_EOL;
+        echo 'Destructor executed at the end of script.';
     }
 
     public function __set($name, $value)
@@ -27,7 +27,7 @@ class Magic
         if (array_key_exists($name, $this->data)) {
             return $this->data[$name];
         }
-        return 'Property does not exist.' . PHP_EOL;
+        return 'Property does not exist.';
     }
 
     public function __isset($name)
@@ -42,7 +42,7 @@ class Magic
 
     public function __toString()
     {
-        return 'This is a string representation of this object.' . PHP_EOL;
+        return 'This is a string representation of this object.';
     }
 
     public static function __set_state($an_array)
@@ -60,12 +60,12 @@ class Magic
 
     public function __call($name, $arguments)
     {
-        echo "Calling object method '$name' " . implode(', ', $arguments) . PHP_EOL;
+        echo "Calling object method '$name' " . implode(', ', $arguments);
     }
 
     public static function __callStatic($name, $arguments)
     {
-        echo "Calling static method '$name' " . implode(', ', $arguments) . PHP_EOL;
+        echo "Calling static method '$name' " . implode(', ', $arguments);
     }
 
     public function __invoke($data)
